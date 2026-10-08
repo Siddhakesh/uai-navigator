@@ -1,0 +1,253 @@
+[
+  {
+    "destination_id": "D001",
+    "name": "Principal Office",
+    "aliases": [
+      "director office",
+      "principal",
+      "HOD office"
+    ],
+    "checkpoint_id": "CP007",
+    "building_id": "B002",
+    "floor": 1,
+    "category": "administration",
+    "description": "Office of the Principal / Director",
+    "icon": "🏛️",
+    "is_active": true,
+    "_id": "91656772-5fbd-4005-bc6a-146b61920e96"
+  },
+  {
+    "destination_id": "D002",
+    "name": "Admissions Office",
+    "aliases": [
+      "admission",
+      "registrar",
+      "student office"
+    ],
+    "checkpoint_id": "CP008",
+    "building_id": "B002",
+    "floor": 1,
+    "category": "administration",
+    "description": "Student admissions and registrar office",
+    "icon": "📋",
+    "is_active": true,
+    "_id": "48b24937-73bf-46ee-9ea9-96fbe4605ec8"
+  },
+  {
+    "destination_id": "D003",
+    "name": "Reception",
+    "aliases": [
+      "front desk",
+      "info desk",
+      "information"
+    ],
+    "checkpoint_id": "CP006",
+    "building_id": "B002",
+    "floor": 0,
+    "category": "administration",
+    "description": "College reception and information desk",
+    "icon": "ℹ️",
+    "is_active": true,
+    "_id": "a6482743-d8f4-4544-97d8-6cf782e0a0ec"
+  },
+  {
+    "destination_id": "D004",
+    "name": "AI & ML Department",
+    "aliases": [
+      "artificial intelligence",
+      "machine learning",
+      "AI dept",
+      "ML dept",
+      "AIML"
+    ],
+    "checkpoint_id": "CP014",
+    "building_id": "B001",
+    "floor": 2,
+    "category": "department",
+    "description": "AI and Machine Learning Department",
+    "icon": "🤖",
+    "is_active": true,
+    "_id": "6fe61776-1201-4e13-851f-674a7b9120e0"
+  },
+  {
+    "destination_id": "D005",
+    "name": "Computer Science Department",
+    "aliases": [
+      "CSE",
+      "CS dept",
+      "computer science",
+      "IT department"
+    ],
+    "checkpoint_id": "CP013",
+    "building_id": "B001",
+    "floor": 1,
+    "category": "department",
+    "description": "Computer Science & Engineering Department",
+    "icon": "💻",
+    "is_active": true,
+    "_id": "b406fca0-67c4-452e-aa14-32c57da509ab"
+  },
+  {
+    "destination_id": "D006",
+    "name": "Data Science Lab",
+    "aliases": [
+      "DS lab",
+      "analytics lab",
+      "data lab"
+    ],
+    "checkpoint_id": "CP015",
+    "building_id": "B001",
+    "floor": 2,
+    "category": "lab",
+    "description": "Data Science and Analytics Laboratory",
+    "icon": "📊",
+    "is_active": true,
+    "_id": "74c7b48c-fa25-43ac-a5b7-e394fd55946a"
+  },
+  {
+    "destination_id": "D007",
+    "name": "Research Lab",
+    "aliases": [
+      "innovation lab",
+      "R&D",
+      "research center"
+    ],
+    "checkpoint_id": "CP016",
+    "building_id": "B001",
+    "floor": 3,
+    "category": "lab",
+    "description": "Research and Innovation Laboratory",
+    "icon": "🔬",
+    "is_active": true,
+    "_id": "dbbe2396-0c5c-4d2b-8ac3-78c55123b95a"
+  },
+  {
+    "destination_id": "D008",
+    "name": "Seminar Hall",
+    "aliases": [
+      "conference room",
+      "seminar",
+      "auditorium",
+      "hall"
+    ],
+    "checkpoint_id": "CP017",
+    "building_id": "B001",
+    "floor": 1,
+    "category": "hall",
+    "description": "Main seminar and conference hall",
+    "icon": "🎓",
+    "is_active": true,
+    "_id": "41aa06a8-7828-4bd8-ab04-330787a0a29b"
+  },
+  {
+    "destination_id": "D009",
+    "name": "Library",
+    "aliases": [
+      "reading room",
+      "book library",
+      "central library",
+      "books"
+    ],
+    "checkpoint_id": "CP019",
+    "building_id": "B003",
+    "floor": 0,
+    "category": "library",
+    "description": "Central Library and Reading Room",
+    "icon": "📚",
+    "is_active": true,
+    "_id": "6eea7710-fc20-4c2f-bfaf-38d7e0838e29"
+  },
+  {
+    "destination_id": "D010",
+    "name": "Cafeteria",
+    "aliases": [
+      "canteen",
+      "food court",
+      "mess",
+      "eat",
+      "lunch",
+      "food"
+    ],
+    "checkpoint_id": "CP021",
+    "building_id": "B006",
+    "floor": 0,
+    "category": "facility",
+    "description": "Student cafeteria and food court",
+    "icon": "🍽️",
+    "is_active": true,
+    "_id": "82c1dd6c-ca86-42bc-8947-5c4180134e45"
+  },
+  {
+    "destination_id": "D011",
+    "name": "Sports Complex",
+    "aliases": [
+      "sports",
+      "ground",
+      "basketball",
+      "cricket",
+      "gym"
+    ],
+    "checkpoint_id": "CP022",
+    "building_id": "B005",
+    "floor": 0,
+    "category": "sports",
+    "description": "Sports complex and grounds",
+    "icon": "⚽",
+    "is_active": true,
+    "_id": "e002e8ad-559f-46cb-b3d9-dd40591d5210"
+  },
+  {
+    "destination_id": "D012",
+    "name": "Hostel",
+    "aliases": [
+      "residence",
+      "dorm",
+      "dormitory",
+      "boys hostel"
+    ],
+    "checkpoint_id": "CP023",
+    "building_id": "B004",
+    "floor": 0,
+    "category": "residential",
+    "description": "Student hostel and residential block",
+    "icon": "🏠",
+    "is_active": true,
+    "_id": "00aae902-8d21-4288-ac13-81afb0f9a5c9"
+  },
+  {
+    "destination_id": "D013",
+    "name": "Parking",
+    "aliases": [
+      "parking lot",
+      "car park",
+      "bike parking",
+      "vehicle"
+    ],
+    "checkpoint_id": "CP004",
+    "building_id": null,
+    "floor": 0,
+    "category": "facility",
+    "description": "Student and staff vehicle parking",
+    "icon": "🅿️",
+    "is_active": true,
+    "_id": "c17a8b6b-637e-4455-8ea3-200297676b93"
+  },
+  {
+    "destination_id": "D014",
+    "name": "Main Gate",
+    "aliases": [
+      "entrance",
+      "exit",
+      "gate 1",
+      "entry gate"
+    ],
+    "checkpoint_id": "CP001",
+    "building_id": null,
+    "floor": 0,
+    "category": "gate",
+    "description": "Main entrance gate of UAI campus",
+    "icon": "🚪",
+    "is_active": true,
+    "_id": "eba7d395-ef11-400c-9a45-c2e15b6dd95d"
+  }
+]

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welcome to UAI Universal AI University</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit}
+html,body{height:100%;margin:0;background:#0f1a2e;font-family:Georgia,"Times New Roman",serif}
+.hero{position:relative;height:100%;min-height:420px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.bg{position:absolute;inset:-6%;background:url("base64_img") center/cover no-repeat;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.14) translate(-2%,-1.5%)}}
+.shade{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(10,20,45,.15),rgba(10,20,45,.65))}
+.cloud{position:absolute;width:60vw;height:18vh;border-radius:50%;background:rgba(255,255,255,.16);filter:blur(30px);animation:drift 40s linear infinite}
+.c1{top:6%;left:-60vw}.c2{top:20%;left:-60vw;animation-duration:58s;animation-delay:-20s;opacity:.7}
+@keyframes drift{to{transform:translateX(170vw)}}
+.hawk{position:absolute;top:14%;left:-20%;width:150px;filter:blur(3px);opacity:.85;animation:fly 22s linear infinite}
+@keyframes fly{0%{transform:translate(0,0)}50%{transform:translate(70vw,-30px)}100%{transform:translate(140vw,10px)}}
+.wing{transform-origin:100px 60px;animation:flap 1.6s ease-in-out infinite}
+@keyframes flap{50%{transform:scaleY(.55)}}
+.dust{position:absolute;bottom:-10px;width:6px;height:6px;border-radius:50%;background:#ffd66b;opacity:0;animation:rise 9s linear infinite}
+@keyframes rise{10%{opacity:.8}100%{transform:translateY(-95vh);opacity:0}}
+.txt{position:relative;padding:0 6vw}
+.w{margin:0;color:#fff;font-size:clamp(20px,4vw,34px);letter-spacing:.25em;text-shadow:0 2px 12px rgba(0,0,0,.6);animation:in 1.2s .3s both}
+.u{margin:.05em 0;color:#ffc629;font-size:clamp(72px,17vw,170px);font-weight:700;letter-spacing:.06em;line-height:1;text-shadow:0 4px 24px rgba(0,0,0,.6);animation:in 1.2s .8s both}
+.bar{display:inline-block;position:relative;overflow:hidden;background:#ffc629;color:#14213d;padding:.35em 1em;border-radius:4px;font-size:clamp(18px,4.2vw,38px);font-weight:700;animation:in 1.2s 1.3s both}
+.bar::after{content:"";position:absolute;top:0;bottom:0;width:30%;left:-40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);animation:shine 4.5s 2.5s infinite}
+@keyframes shine{to{left:130%}}
+@keyframes in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+.ask{margin-top:1.4em;display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.55);color:#fff;font:inherit;font-size:clamp(16px,3.4vw,26px);padding:.55em 1.3em;border-radius:999px;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;animation:in 1s 3s both}
+.ask:hover,.ask:focus-visible{background:rgba(255,255,255,.28);outline:2px solid #ffc629;outline-offset:3px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;border:0;background:#ffc629;color:#14213d;font-size:26px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.4);z-index:20}
+.fab:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.chat{position:fixed;right:16px;bottom:calc(86px + env(safe-area-inset-bottom,0px));width:min(360px,calc(100vw - 32px));height:min(460px,65vh);display:none;flex-direction:column;background:#fff;color:#14213d;border-radius:14px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.45);z-index:20;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.chat.open{display:flex}
+.ch{background:#14213d;color:#ffc629;padding:12px 14px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.ch button{background:none;border:0;color:#fff;font-size:20px;cursor:pointer}
+#msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;background:#f3f5f9}
+.m{max-width:80%;padding:8px 12px;border-radius:12px;font-size:14px;line-height:1.4;word-wrap:break-word}
+.m.user{align-self:flex-end;background:#14213d;color:#fff}
+.m.bot{align-self:flex-start;background:#fff;border:1px solid #d9dee8}
+.cf{display:flex;gap:8px;padding:10px;border-top:1px solid #d9dee8;background:#fff}
+.cf input{flex:1;min-width:0;padding:10px 12px;border:1px solid #b9c1d1;border-radius:8px;font-size:14px}
+.cf button{background:#ffc629;color:#14213d;border:0;border-radius:8px;padding:0 14px;font-weight:600;cursor:pointer}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.dust{display:none}}
+
+.nav{position:fixed;inset:0;z-index:30;display:none;overflow-y:auto;background:#0f1a2e;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding:max(16px,env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.nav.open{display:block}
+.nv{max-width:560px;margin:0 auto}
+.nvh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.nvh h2{margin:0;font-family:Georgia,serif;color:#ffc629;font-size:22px}
+.nvh button{background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+.st{background:#1b2a48;border-left:4px solid #ffc629;border-radius:8px;padding:14px;font-size:17px;line-height:1.4}
+.st small{display:block;margin-top:6px;color:#b9c4dc;font-size:13px}
+.nt{margin-top:10px;background:#3a2f12;border:1px solid #ffc629;border-radius:8px;padding:10px 12px;font-size:13px;line-height:1.45}
+.nv h3{margin:22px 0 10px;font-size:15px;font-weight:600;color:#b9c4dc}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dg button{background:#ffc629;color:#14213d;border:0;border-radius:10px;padding:14px 8px;font:inherit;font-weight:600;cursor:pointer}
+.dg button[aria-pressed=true]{outline:3px solid #fff}
+.dg button:disabled{opacity:.4;cursor:not-allowed}
+.nm{margin-top:12px;font-size:14px;color:#ffd66b;min-height:1.2em}
+#nvVid{display:none;width:100%;margin-top:12px;border-radius:10px;background:#000;max-height:60vh}
+.ar{display:none;margin-top:14px;background:#1f7a4d;border-radius:10px;padding:16px;font-size:20px;font-weight:700;text-align:center}
+.nv a{color:#ffc629}
+</style></head>
+<body>
+<main class="hero">
+<div class="bg" role="img" aria-label="UAI campus nestled among green hills"></div>
+<div class="shade"></div>
+<div class="cloud c1"></div><div class="cloud c2"></div>
+<svg class="hawk" viewBox="0 0 200 120" aria-hidden="true"><g fill="#0d1428"><g class="wing"><path d="M100 55C70 30 30 30 0 55C25 52 40 60 50 72C62 64 78 66 90 76Z"/><path d="M100 55C130 30 170 30 200 55C175 52 160 60 150 72C138 64 122 66 110 76Z"/></g><ellipse cx="100" cy="70" rx="12" ry="22"/><circle cx="100" cy="45" r="9"/><path d="M106 46L118 51L106 53Z" fill="#c98a1e"/><path d="M92 88L108 88L114 112L86 112Z"/></g></svg>
+<span class="dust" style="left:12%;animation-delay:0s"></span><span class="dust" style="left:30%;animation-delay:3s"></span><span class="dust" style="left:55%;animation-delay:6s"></span><span class="dust" style="left:78%;animation-delay:1.5s"></span><span class="dust" style="left:92%;animation-delay:4.5s"></span>
+<div class="txt"><p class="w">Welcome to</p><h1 class="u">UAI</h1><div class="bar">Universal AI University</div><br><button class="ask" id="ask" type="button">Where do you want to travel?</button></div>
+</main>
+<button class="fab" id="fab" type="button" aria-label="Open chat" aria-expanded="false">&#128172;</button>
+<section class="chat" id="chat" aria-label="Chatbot"><div class="ch"><span>UAI assistant</span><button id="x" type="button" aria-label="Close chat">&times;</button></div><div id="msgs" aria-live="polite"></div><div class="cf"><input id="in" type="text" placeholder="Type a message" aria-label="Message"><button id="send" type="button">Send</button></div></section>
+<section class="nav" id="nav" aria-label="Campus navigation"><div class="nv">
+<div class="nvh"><h2>Campus Navigator</h2><button id="nvX" type="button" aria-label="Close navigator">&times;</button></div>
+<div class="st" id="nvSt" aria-live="polite">Requesting location permission...</div>
+<div class="nt" id="nvNt" style="display:none"></div>
+<h3>Where do you want to go?</h3>
+<div class="dg" id="nvDg"></div>
+<div class="nm" id="nvMsg" aria-live="polite"></div>
+<video id="nvVid" controls playsinline preload="metadata"></video>
+<div class="ar" id="nvAr" role="status"></div>
+</div></section>
+<script id="uai-config">
+/* ===== UAI NAVIGATION CONFIG - the only part you need to edit =====
+   1) LOCATIONS: fill in real lat / lng / radius (metres) for each zone.
+   2) ROUTES: add one line per recorded video.
+      Example (uncomment and edit when you have the real file):
+      { from: "main_gate", to: "hostel", video: "videos/main_gate_to_hostel.mp4" },
+      Optional: startAt: 45  -> start the video at 45 seconds (for mid-route checkpoints). */
+window.UAI_CONFIG = {
+  locations: [
+    { id: "main_gate", name: "UAI Main Gate", lat: null, lng: null, radius: null },
+    { id: "fountain",  name: "UAI Fountain",  lat: null, lng: null, radius: null },
+    { id: "hostel",    name: "Hostel",        lat: null, lng: null, radius: null },
+    { id: "parking",   name: "Parking",       lat: null, lng: null, radius: null }
+  ],
+  routes: [
+  ],
+  maxAccuracyMeters: 50,   // worse than this -> "Getting your precise location..."
+  nearBufferMeters: 30     // still counts as "near" this far outside the radius
+};
+</script>
+<script>
+(function(){
+var chat=document.getElementById('chat'),fab=document.getElementById('fab'),msgs=document.getElementById('msgs'),input=document.getElementById('in');
+function toggle(o){chat.classList.toggle('open',o);fab.setAttribute('aria-expanded',o);if(o)input.focus()}
+function add(role,text){var d=document.createElement('div');d.className='m '+role;d.textContent=text;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d}
+async function send(){var v=input.value.trim();if(!v)return;input.value='';add('user',v);
+ if(typeof api.onUserMessage==='function'){try{var r=await api.onUserMessage(v);if(r)add('bot',r)}catch(e){console.error(e)}}}
+var api={open:function(){toggle(true)},close:function(){toggle(false)},addMessage:add,onUserMessage:null};
+window.UAIChat=api;
+fab.onclick=function(){toggle(!chat.classList.contains('open'))};
+document.getElementById('x').onclick=function(){toggle(false)};
+document.getElementById('ask').onclick=function(){window.UAINav.open()};
+document.getElementById('send').onclick=send;
+input.addEventListener('keydown',function(e){if(e.key==='Enter')send()});
+})();
+</script>
+<script>
+(function(){
+var C=window.UAI_CONFIG,L=C.locations,pos=null,wid=null,route=null,arrived=false;
+var $=function(i){return document.getElementById(i)};
+var nav=$('nav'),st=$('nvSt'),nt=$('nvNt'),dg=$('nvDg'),msg=$('nvMsg'),vid=$('nvVid'),ar=$('nvAr');
+function ok(l){return typeof l.lat==='number'&&typeof l.lng==='number'&&typeof l.radius==='number'}
+function dist(a,b,c,d){var R=6371000,r=Math.PI/180,x=(c-a)*r,y=(d-b)*r,h=Math.sin(x/2)*Math.sin(x/2)+Math.cos(a*r)*Math.cos(c*r)*Math.sin(y/2)*Math.sin(y/2);return 2*R*Math.asin(Math.sqrt(h))}
+function d2(l){return dist(pos.lat,pos.lng,l.lat,l.lng)}
+function precise(){return pos&&pos.acc<=C.maxAccuracyMeters}
+function nearest(){var b=null;if(!pos)return null;L.forEach(function(l){if(!ok(l))return;var d=d2(l);if(!b||d<b.d)b={l:l,d:d}});return b}
+function current(){var n=nearest();return n&&n.d<=n.l.radius+C.nearBufferMeters?n.l:null}
+function find(id){return L.filter(function(l){return l.id===id})[0]}
+function status(m,s){st.innerHTML=m+(s?'<small>'+s+'</small>':'')}
+function render(e){
+ var miss=L.filter(function(l){return !ok(l)});
+ nt.style.display=miss.length?'block':'none';
+ if(miss.length)nt.textContent='Setup needed: add latitude, longitude and radius in UAI_CONFIG for '+miss.map(function(l){return l.name}).join(', ')+'.';
+ if(e){status(e);return}
+ if(!pos){status('Getting your precise location...');return}
+ var acc='GPS accuracy: \u00b1'+Math.round(pos.acc)+' m';
+ if(!precise()){status('Getting your precise location...',acc);return}
+ var n=nearest();
+ if(!n){status('Your location is detected.',acc+' \u2022 Campus zones are not configured yet.');return}
+ var c=current();
+ if(c)status('\ud83d\udccd You are currently near '+c.name,acc);
+ else status('You are about '+Math.round(n.d)+' m from the nearest point, '+n.l.name+'.',acc);
+ if(route&&!arrived){var t=find(route.to);if(ok(t)&&d2(t)<=t.radius){arrived=true;ar.textContent='\ud83c\udf89 You have arrived at '+t.name;ar.style.display='block'}}
+}
+function choose(id){
+ var t=find(id),c=current();arrived=false;route=null;ar.style.display='none';vid.pause();vid.style.display='none';
+ [].forEach.call(dg.children,function(b){b.setAttribute('aria-pressed',b.dataset.id===id)});
+ if(!ok(t)){msg.textContent=t.name+' has no coordinates configured yet.';return}
+ if(!precise()){msg.textContent='Still getting your precise location. Please wait a moment.';return}
+ if(!c){msg.textContent='Please stand at one of the campus points (Main Gate, Fountain, Hostel or Parking) to start.';return}
+ if(c.id===id){msg.textContent='You are already at '+t.name+'.';return}
+ var r=C.routes.filter(function(x){return x.from===c.id&&x.to===id})[0];
+ if(!r){msg.textContent='No recorded route yet from '+c.name+' to '+t.name+'.';return}
+ route=r;msg.textContent='Playing route: '+c.name+' \u2192 '+t.name;
+ vid.style.display='block';vid.src=r.video;
+ vid.onloadedmetadata=function(){if(r.startAt)vid.currentTime=r.startAt};
+ vid.onerror=function(){msg.textContent='Video file not found: '+r.video};
+ var p=vid.play();if(p&&p.catch)p.catch(function(){});
+}
+L.forEach(function(l){var b=document.createElement('button');b.type='button';b.textContent=l.name;b.dataset.id=l.id;b.setAttribute('aria-pressed','false');b.onclick=function(){choose(l.id)};dg.appendChild(b)});
+function start(){
+ if(!navigator.geolocation){render('Location is not supported on this device.');return}
+ if(!window.isSecureContext){render('Location needs a secure (HTTPS) connection.');return}
+ if(wid!==null)return;
+ wid=navigator.geolocation.watchPosition(function(p){pos={lat:p.coords.latitude,lng:p.coords.longitude,acc:p.coords.accuracy};render()},
+  function(e){wid=null;if(e.code===1)render('Location permission was denied. Please allow location access in your browser settings.');else if(e.code===2)render('Your location is unavailable right now. Check that GPS is on.');else render('Getting your precise location...')},
+  {enableHighAccuracy:true,maximumAge:1000,timeout:20000});
+ render();
+}
+function stop(){if(wid!==null){navigator.geolocation.clearWatch(wid);wid=null}vid.pause()}
+window.UAINav={open:function(){nav.classList.add('open');start()},close:function(){nav.classList.remove('open');stop()}};
+$('nvX').onclick=window.UAINav.close;
+})();
+</script>
+</body></html>

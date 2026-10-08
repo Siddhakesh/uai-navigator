@@ -1,0 +1,158 @@
+[
+  {
+    "building_id": "B001",
+    "name": "Main Building (Academic Block)",
+    "description": "Central academic block with all departments",
+    "floors": 4,
+    "color": "#3B82F6",
+    "polygon": [
+      [
+        250,
+        180
+      ],
+      [
+        450,
+        180
+      ],
+      [
+        450,
+        360
+      ],
+      [
+        250,
+        360
+      ]
+    ],
+    "_id": "5ac93776-a73c-44cb-ba84-50cb25a318c0"
+  },
+  {
+    "building_id": "B002",
+    "name": "Administration Block",
+    "description": "College administration, principal office, admissions",
+    "floors": 2,
+    "color": "#8B5CF6",
+    "polygon": [
+      [
+        100,
+        150
+      ],
+      [
+        240,
+        150
+      ],
+      [
+        240,
+        280
+      ],
+      [
+        100,
+        280
+      ]
+    ],
+    "_id": "8eab4b11-6141-4ec7-b87c-3c1a32184063"
+  },
+  {
+    "building_id": "B003",
+    "name": "Library Block",
+    "description": "Central library and reading rooms",
+    "floors": 2,
+    "color": "#10B981",
+    "polygon": [
+      [
+        460,
+        150
+      ],
+      [
+        580,
+        150
+      ],
+      [
+        580,
+        280
+      ],
+      [
+        460,
+        280
+      ]
+    ],
+    "_id": "c3a0b433-5b2c-4f53-b19f-31b1c2f68c74"
+  },
+  {
+    "building_id": "B004",
+    "name": "Hostel Block",
+    "description": "Student residential quarters",
+    "floors": 5,
+    "color": "#F59E0B",
+    "polygon": [
+      [
+        600,
+        100
+      ],
+      [
+        750,
+        100
+      ],
+      [
+        750,
+        320
+      ],
+      [
+        600,
+        320
+      ]
+    ],
+    "_id": "f9b7b818-876b-402a-95b6-e78f06d67326"
+  },
+  {
+    "building_id": "B005",
+    "name": "Sports Complex",
+    "description": "Indoor and outdoor sports facilities",
+    "floors": 1,
+    "color": "#EF4444",
+    "polygon": [
+      [
+        50,
+        380
+      ],
+      [
+        250,
+        380
+      ],
+      [
+        250,
+        520
+      ],
+      [
+        50,
+        520
+      ]
+    ],
+    "_id": "1f8409b0-2139-47b5-ad7f-5871b286232c"
+  },
+  {
+    "building_id": "B006",
+    "name": "Canteen & Cafeteria",
+    "description": "Student cafeteria and food court",
+    "floors": 1,
+    "color": "#F97316",
+    "polygon": [
+      [
+        260,
+        380
+      ],
+      [
+        420,
+        380
+      ],
+      [
+        420,
+        460
+      ],
+      [
+        260,
+        460
+      ]
+    ],
+    "_id": "e16aaba7-cef0-4b48-85c3-e66859e46a89"
+  }
+]
